@@ -43,11 +43,6 @@ const buttons = document.querySelectorAll('button');
 const boxes = document.querySelector('[id="boxes"]');
 
 
-console.log(form);
-console.log(buttons[1]);
-console.log(buttons[0]);
-console.log(boxes);
-
 form.addEventListener('input', createBoxes);
 buttons[0].addEventListener('click', onCreateButton);
 buttons[1].addEventListener('click', onDestroyButton);
@@ -55,11 +50,10 @@ buttons[1].addEventListener('click', onDestroyButton);
 
 
 function createBoxes(amount) {
-
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     box.style.width = 30 + (10 * i) + 'px';
-    box.style.height = 30 + 'px';
+    box.style.height = 30 + (10 * i) + 'px';
     box.style.backgroundColor = getRandomHexColor();
     
     boxes.append(box);
