@@ -20,7 +20,7 @@ input.addEventListener('input', onInputChange);
 function onInputChange(event) {
    
     if (event.currentTarget.value.trim().length === 0) {
-        title.textContent = 'Anonumus';
+        title.textContent = 'Anonymous';
     } else {
  title.textContent = event.currentTarget.value;
     };
