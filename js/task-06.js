@@ -34,8 +34,8 @@ input.addEventListener('blur', offFocusChange);
 
 
 function offFocusChange() {
-      console.log(input.value.length);
-  if (input.getAttribute('data-length') > input.value.length) { 
+  console.log(input.value.trim().length);
+  if (input.getAttribute('data-length') > input.value.trim().length) { 
     input.classList.remove('valid');
     input.classList.add('invalid');
   } else {

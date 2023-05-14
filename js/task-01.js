@@ -33,16 +33,18 @@
     const titleNumberListEl = [];
 
     const titleNameLinkEl = document.querySelectorAll('h2');
-    for (let title of titleNameLinkEl) {
-        titleNumberListEl.push(title.textContent);
-    };
+titleNameLinkEl.forEach(function (title) {
+    titleNumberListEl.push(title.textContent)
+}
+);
 
     const linkNumEl = [];
 
 const linkTotalsEl = linkEl.querySelectorAll('li.item');
-    for (let el of linkTotalsEl) {
-       linkNumEl.push(el.querySelectorAll('li').length);
-};
+linkTotalsEl .forEach(function (el) {
+    linkNumEl.push(el.querySelectorAll('li').length);
+}
+);
 
     
  console.log(`Number of categories: ${linkNumberEl}`)

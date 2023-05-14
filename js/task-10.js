@@ -64,7 +64,9 @@ function createBoxes(amount) {
 function onCreateButton(greate) {
   greate.preventDefault();
   greate = form.value;
-  if(greate > 0) {
+  const parsed = parseInt(greate, 0);
+  if(parsed) {
+  // if(greate > 0) {
     createBoxes(greate);
   }
 };

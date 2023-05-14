@@ -18,7 +18,11 @@ input.addEventListener('input', onInputChange);
 
 
 function onInputChange(event) {
-    title.textContent = event.currentTarget.value;
+   
+    if (event.currentTarget.value.trim().length === 0) {
+        title.textContent = 'Anonumus';
+    } else {
+ title.textContent = event.currentTarget.value;
+    };
 };
-
 

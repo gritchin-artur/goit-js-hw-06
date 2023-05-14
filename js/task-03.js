@@ -28,34 +28,6 @@ const images = [
 
 const findListEl = document.querySelector('ul.gallery');
 
-// const catEl = document.createElement('li');
-// const catImegEl = document.createElement('img');
-// catImegEl.src = images[0].url;
-// catImegEl.alt = images[0].alt;
-// catImegEl.width = 320;
-// catEl.append(catImegEl);
-// catImegEl.insertAdjacentHTML("afterend", `${images[0].alt}`);
-
-
-// const fishEl = document.createElement('li');
-// const fishImegEl = document.createElement('img');
-// fishImegEl.src = images[1].url;
-// fishImegEl.alt = images[1].alt;
-// fishImegEl.width = 320;
-// fishEl.append(fishImegEl);
-// fishImegEl.insertAdjacentHTML("afterend", `${images[1].alt}`);
-
-
-// const runningEl = document.createElement('li');
-// const runningImegEl = document.createElement('img');
-// runningImegEl.src = images[2].url;
-// runningImegEl.alt = images[2].alt;
-// runningImegEl.width = 320;
-// runningEl.append(runningImegEl);
-// runningImegEl.insertAdjacentHTML("afterend", `${images[2].alt}`);
-
-
-// findListEl.append(catEl, fishEl, runningEl);
 
 
 
@@ -73,9 +45,7 @@ const catImegEl = document.createElement('img');
 catImegEl.style.outline = '5px solid tomato';
   linkEl.append(catImegEl);
 findListEl.append(linkEl);
-catImegEl.insertAdjacentHTML("afterend", `<p href="">${option.alt}</p>`);
-
-  
+catImegEl.insertAdjacentHTML("afterend", `<p href="">${option.alt}</p>`); 
 }
 );
 
