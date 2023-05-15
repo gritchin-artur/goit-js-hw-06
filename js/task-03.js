@@ -32,21 +32,18 @@ const findListEl = document.querySelector('ul.gallery');
 
 
 const elements = images.map(option => {
-  const linkEl = document.createElement('li');
-const catImegEl = document.createElement('img');
-
-  catImegEl.src = option.url;
-  catImegEl.alt = option.alt;
-  catImegEl.style.backgroundColor = 'black';
-  catImegEl.style.width = '500px';
-  catImegEl.style.padding = '20px';
-  catImegEl.style.display = 'flex';
-  catImegEl.style.borderRadius = '5px';
-catImegEl.style.outline = '5px solid tomato';
-  linkEl.append(catImegEl);
-findListEl.append(linkEl);
-catImegEl.insertAdjacentHTML("afterend", `<p href="">${option.alt}</p>`); 
-}
-);
-
+  findListEl.insertAdjacentHTML("afterend",  `
+<li class="gallery__item">
+      <img class="gallery__image" src="${option.url}" alt="${option.alt}" />
+</li>`)
+  const photo = document.querySelector('img');
+    
+  photo.style.backgroundColor = 'black';
+  photo.style.width = '500px';
+  photo.style.padding = '20px';
+  photo.display = 'flex';
+  photo.style.marginBottom = '20px';
+  photo.style.borderRadius = '5px';
+photo.style.outline = '5px solid tomato';
   
+});
